@@ -1,0 +1,23 @@
+{
+  "name": "gulp-embed",
+  "version": "1.0.0",
+  "description": "a gulp plugin wrapper around resource-embedder",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VaJoy/gulp-embed.git"
+  },
+  "author": "vajoylarn",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-embed": "^1.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/VaJoy/gulp-embed/issues"
+  },
+  "homepage": "https://github.com/VaJoy/gulp-embed#readme"
+}

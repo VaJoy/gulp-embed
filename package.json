@@ -1,0 +1,36 @@
+{
+  "name": "gulp-embed",
+  "version": "1.0.1",
+  "description": "a gulp plugin wrapper around resource-embedder2(modified version of resource-embedder)",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VaJoy/gulp-embed.git"
+  },
+  "author": {
+    "name": "vajoylarn"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.0",
+    "coffee-script": "~1.7.1",
+    "htmlparser2": "~3.5.0",
+    "graceful-fs": "~2.0.2",
+    "lodash": "~2.4.1",
+    "reorient-css": "~0.2.1"
+  },
+  "bugs": {
+    "url": "https://github.com/VaJoy/gulp-embed/issues"
+  },
+  "homepage": "https://github.com/VaJoy/gulp-embed#readme",
+  "readme": "# [gulp](https://github.com/wearefractal/gulp)-embed\r\n> a gulp plugin wrapper around resource-embedder\r\n\r\n## Install\r\n\r\nInstall with [npm](https://npmjs.org/package/gulp-embed).\r\n\r\n```\r\nnpm install --save-dev gulp-embed\r\n```\r\n\r\n## LICENSE\r\n[MIT](http://en.wikipedia.org/wiki/MIT_License) @ VaJoy Larn",
+  "readmeFilename": "README.md",
+  "gitHead": "b29a2148b1ece4f1e9356f4037b5a9afacee025e",
+  "_id": "gulp-embed@1.0.0",
+  "_shasum": "ef5100c40e299838584d7fffd3b5270b93561156",
+  "_from": "gulp-embed@>=1.0.0 <2.0.0"
+}

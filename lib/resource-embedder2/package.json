@@ -1,0 +1,62 @@
+{
+  "name": "resource-embedder",
+  "version": "0.2.2",
+  "description": "Embeds the contents of external scripts and stylesheets into HTML.",
+  "homepage": "https://github.com/callumlocke/resource-embedder",
+  "bugs": {
+    "url": "https://github.com/callumlocke/resource-embedder/issues"
+  },
+  "author": {
+    "name": "Callum Locke",
+    "url": "https://github.com/callumlocke"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callumlocke/resource-embedder.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1",
+    "sugar": "~1.4.1",
+    "wrench": "~1.5.4"
+  },
+  "dependencies": {
+    "coffee-script": "~1.7.1",
+    "htmlparser2": "~3.5.0",
+    "graceful-fs": "~2.0.2",
+    "lodash": "~2.4.1",
+    "reorient-css": "~0.2.1"
+  },
+  "_id": "resource-embedder@0.2.2",
+  "dist": {
+    "shasum": "20688fb5143737ec33a23b372c9144cb48196426",
+    "tarball": "http://registry.npmjs.org/resource-embedder/-/resource-embedder-0.2.2.tgz"
+  },
+  "_from": "resource-embedder@>=0.2.2 <0.3.0",
+  "_npmVersion": "1.4.3",
+  "_npmUser": {
+    "name": "callumlocke",
+    "email": "callum.locke@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "callumlocke",
+      "email": "callum.locke@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_shasum": "20688fb5143737ec33a23b372c9144cb48196426",
+  "_resolved": "https://registry.npmjs.org/resource-embedder/-/resource-embedder-0.2.2.tgz",
+  "readme": "ERROR: No README data found!"
+}
