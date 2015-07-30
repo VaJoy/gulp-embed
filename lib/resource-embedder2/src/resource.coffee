@@ -73,7 +73,7 @@ module.exports = class Resource
   getThreshold: (embedAttr = @attributes?['data-embed'], options=@options) ->
     switch embedAttr
       when 'false', '0' then 0
-      when 'disable' then 'disable'
+      when 'disable' then 1
       when null, undefined then parseFileSize options.threshold
       when '' then Infinity
       else parseFileSize embedAttr
