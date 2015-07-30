@@ -16,20 +16,17 @@ module.exports = class Resource
     else
       if @potentiallyEmbeddable()
         threshold = @getThreshold()
-        if threshold is 'disable'
-          callback @embed = 'disable'
         if !threshold
           callback @embed = false
         else
           @getContentsForEmbedding (notFound, missingFilePath) =>
-            if (notFound)
+            if threshold is 'disable'
+              callback @embed = 'disable'
+            else if (notFound)
               @warning = "File does not exist: #{missingFilePath}"
               callback @embed = false
             else
-              if threshold is 'disable'
-                callback @embed
-              else
-                callback @embed = (threshold > @getByteLength())
+              callback @embed = (threshold > @getByteLength())
       else
         callback @embed = false
 
@@ -73,7 +70,7 @@ module.exports = class Resource
   getThreshold: (embedAttr = @attributes?['data-embed'], options=@options) ->
     switch embedAttr
       when 'false', '0' then 0
-      when 'disable' then 1
+      when 'disable' then 'disable'
       when null, undefined then parseFileSize options.threshold
       when '' then Infinity
       else parseFileSize embedAttr

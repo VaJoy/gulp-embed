@@ -15,9 +15,6 @@ module.exports = (str) ->
   if typeof str is 'number'
     return str
 
-  if str is 'disable'
-    return 1
-
   number = str.match(/^[0-9\.]+/)
   if !number? or !number.length
     throw new Error "Number not found in string: #{str}"
