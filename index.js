@@ -12,7 +12,7 @@ module.exports = function (options) {
 
         var filepath = file.path;
 
-        //文件不存在
+        //file not exsists
         if (file.isNull()) {
             this.emit('error', new PluginError('gulp-embed', 'File not found: "' + filepath + '"'));
             return cb();

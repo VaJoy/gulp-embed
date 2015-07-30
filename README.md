@@ -30,7 +30,7 @@ add relative attributes to `<script>` or `<link>` to determine the handling of t
 <body>
     <div id="container"></div>
     <textarea id="debug" cols="100" rows="30"></textarea>
-    <script type="text/javascript" data-src="./js/a.js" data-embed></script> <!-- will be embed although using 'data-src' only -->
+    <script type="text/javascript" data-src="./js/a.js" data-embed></script> <!-- will be embed using 'data-src' only -->
     <script type="text/javascript" src="./js/b.js" data-embed="disable"></script><!-- will be removed finally -->
 </body>
 </html>

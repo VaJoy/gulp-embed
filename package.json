@@ -1,6 +1,6 @@
 {
   "name": "gulp-embed",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "a gulp plugin wrapper around resource-embedder2(modified version of resource-embedder)",
   "main": "index.js",
   "scripts": {
