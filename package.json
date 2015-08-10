@@ -1,6 +1,6 @@
 {
   "name": "gulp-embed",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "a gulp plugin wrapper around resource-embedder2(modified version of resource-embedder)",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,8 @@
     "htmlparser2": "~3.5.0",
     "graceful-fs": "~2.0.2",
     "lodash": "~2.4.1",
-    "reorient-css": "~0.2.1"
+    "reorient-css": "~0.2.1",
+    "got": "^4.1.1"
   },
   "bugs": {
     "url": "https://github.com/VaJoy/gulp-embed/issues"
