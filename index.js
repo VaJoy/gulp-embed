@@ -18,7 +18,7 @@ module.exports = function (options) {
             return cb();
         }
 
-        var embedder = new ResourceEmbedder(filepath);
+        var embedder = new ResourceEmbedder(filepath, options);
 
         embedder.get(function (markup) {
             var f = new gutil.File({
@@ -31,5 +31,5 @@ module.exports = function (options) {
             cb();
         }.bind(this));
 
-    })
+    });
 };
