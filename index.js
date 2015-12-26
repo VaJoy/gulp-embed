@@ -23,7 +23,7 @@ module.exports = function (options) {
         embedder.get(function (markup) {
             var f = new gutil.File({
                 cwd: '',
-                path: path.basename(filepath),
+                path: file.relative,
                 contents: new Buffer(markup)
             });
 

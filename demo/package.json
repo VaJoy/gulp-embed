@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "gulp": "^3.9.0",
-    "gulp-embed": "^1.0.10"
+    "gulp-embed": "^1.0.11"
   },
   "bugs": {
     "url": "https://github.com/VaJoy/gulp-embed/issues"
