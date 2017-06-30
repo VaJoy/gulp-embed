@@ -22,12 +22,13 @@ indentEachLine = (str, indent) ->
 
 module.exports = class ResourceEmbedder
   constructor: (_options) ->
+
     # Normalise arguments
     if typeof _options is 'string'
       htmlFile = arguments[0]
       _options = arguments[1] || {}
       _options.htmlFile = htmlFile
-    
+
     # Build options
     @options = assign {}, defaults, _options
     @options.htmlFile = path.resolve @options.htmlFile
@@ -64,16 +65,22 @@ module.exports = class ResourceEmbedder
 
           body = (if indent.length then indentEachLine(er.body, indent) else er.body)
 
+          attrs = [er.type];
+          for own key, value of er.attr
+            if (key == 'href' || key == 'data-href') && er.type == 'style' || (key == 'src' || key == 'data-src') && er.type == 'script' || key == 'data-embed'
+              continue
+            attrs.push(key + '="' + value + '"')
+          tag = '<' + attrs.join(' ') + '>';
           outputMarkup += (
             inputMarkup.substring(index, er.elementStartIndex) +
-            (if isAble then "<#{er.type}>" else "") +
+            (if isAble then tag else "") +
             (if multiline then '\n' else '') +
             body +
             (if multiline then '\n' else '') +
             indent + (if isAble then "</#{er.type}>" else "")
           )
           index = er.elementEndIndex + 1
-          
+
           if @options.deleteEmbeddedFiles && fs.existsSync er.path
             fs.unlinkSync er.path
 
@@ -94,6 +101,7 @@ module.exports = class ResourceEmbedder
               er = embeddableResources[thisTagId]
               er.body = (if embed is 'disable' then '<!--disable-->' else resource.contents)
               er.type = (if tagName is 'script' then 'script' else 'style')
+              er.attr = attributes
               er.path = path.resolve path.join(@options.assetRoot, resource.target)
               er.elementStartIndex = startIndexOfThisTag
             else
