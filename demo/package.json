@@ -1,6 +1,6 @@
 {
   "name": "gulp-embed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a gulp plugin wrapper around resource-embedder",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "gulp": "^3.9.0",
-    "gulp-embed": "^1.1.0"
+    "gulp-embed": "^1.1.1"
   },
   "bugs": {
     "url": "https://github.com/VaJoy/gulp-embed/issues"
